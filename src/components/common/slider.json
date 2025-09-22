@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_common_sliders",
+  "info": {
+    "displayName": "Slider",
+    "icon": "grid"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}
