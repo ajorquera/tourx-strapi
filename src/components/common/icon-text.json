@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_icon_texts",
+  "info": {
+    "displayName": "IconText"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

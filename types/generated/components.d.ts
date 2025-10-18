@@ -1,5 +1,16 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CommonIconText extends Struct.ComponentSchema {
+  collectionName: 'components_common_icon_texts';
+  info: {
+    displayName: 'IconText';
+  };
+  attributes: {
+    icon: Schema.Attribute.String;
+    text: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface CommonSeo extends Struct.ComponentSchema {
   collectionName: 'components_common_seos';
   info: {
@@ -22,8 +33,12 @@ export interface CommonSlider extends Struct.ComponentSchema {
     icon: 'grid';
   };
   attributes: {
+    Caracteristicas: Schema.Attribute.Component<'common.icon-text', true>;
+    cta: Schema.Attribute.String;
     images: Schema.Attribute.Media<'images' | 'files', true> &
       Schema.Attribute.Required;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -81,6 +96,7 @@ export interface SharedSeo extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'common.icon-text': CommonIconText;
       'common.seo': CommonSeo;
       'common.slider': CommonSlider;
       'shared.open-graph': SharedOpenGraph;

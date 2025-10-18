@@ -14,5 +14,35 @@
       "localized": true
     }
   },
-  "attributes": {}
+  "attributes": {
+    "SEO": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "common.seo",
+      "repeatable": true,
+      "required": true
+    },
+    "Hero": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "common.slider",
+      "repeatable": false
+    },
+    "content": {
+      "type": "blocks",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
 }

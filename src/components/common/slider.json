@@ -14,6 +14,21 @@
         "images",
         "files"
       ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "string"
+    },
+    "Caracteristicas": {
+      "type": "component",
+      "component": "common.icon-text",
+      "repeatable": true
     }
   },
   "config": {}
