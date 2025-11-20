@@ -6,28 +6,9 @@
   },
   "options": {},
   "attributes": {
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files"
-      ]
-    },
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "subtitle": {
-      "type": "string"
-    },
-    "cta": {
-      "type": "string"
-    },
-    "Caracteristicas": {
+    "slides": {
       "type": "component",
-      "component": "common.icon-text",
+      "component": "slider.slide",
       "repeatable": true
     }
   },

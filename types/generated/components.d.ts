@@ -5,24 +5,17 @@ export interface CommonIconText extends Struct.ComponentSchema {
   info: {
     displayName: 'IconText';
   };
-  attributes: {
-    icon: Schema.Attribute.String;
-    text: Schema.Attribute.String & Schema.Attribute.Required;
-  };
+  attributes: {};
 }
 
-export interface CommonSeo extends Struct.ComponentSchema {
-  collectionName: 'components_common_seos';
+export interface CommonLink extends Struct.ComponentSchema {
+  collectionName: 'components_common_links';
   info: {
-    displayName: 'SEO';
-    icon: 'code';
+    displayName: 'Link';
   };
   attributes: {
-    description: Schema.Attribute.String & Schema.Attribute.Required;
-    imageUrl: Schema.Attribute.String & Schema.Attribute.Required;
-    title: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
+    contenido: Schema.Attribute.String;
+    link: Schema.Attribute.String;
   };
 }
 
@@ -33,12 +26,7 @@ export interface CommonSlider extends Struct.ComponentSchema {
     icon: 'grid';
   };
   attributes: {
-    Caracteristicas: Schema.Attribute.Component<'common.icon-text', true>;
-    cta: Schema.Attribute.String;
-    images: Schema.Attribute.Media<'images' | 'files', true> &
-      Schema.Attribute.Required;
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    slides: Schema.Attribute.Component<'slider.slide', true>;
   };
 }
 
@@ -73,23 +61,37 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
   attributes: {
     canonicalURL: Schema.Attribute.String;
-    keywords: Schema.Attribute.Text;
-    metaDescription: Schema.Attribute.String &
+    descripcion: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 160;
         minLength: 50;
       }>;
-    metaImage: Schema.Attribute.Media<'images'>;
+    imagen: Schema.Attribute.Media<'images'>;
+    keywords: Schema.Attribute.Text;
     metaRobots: Schema.Attribute.String;
-    metaTitle: Schema.Attribute.String &
+    metaViewport: Schema.Attribute.String;
+    openGraph: Schema.Attribute.Component<'shared.open-graph', false>;
+    structuredData: Schema.Attribute.JSON;
+    titulo: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 60;
       }>;
-    metaViewport: Schema.Attribute.String;
-    openGraph: Schema.Attribute.Component<'shared.open-graph', false>;
-    structuredData: Schema.Attribute.JSON;
+  };
+}
+
+export interface SliderSlide extends Struct.ComponentSchema {
+  collectionName: 'components_slider_slides';
+  info: {
+    displayName: 'Slide';
+    icon: 'apps';
+  };
+  attributes: {
+    cta: Schema.Attribute.Component<'common.link', false>;
+    descripcion: Schema.Attribute.String;
+    imagen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    titulo: Schema.Attribute.String;
   };
 }
 
@@ -97,10 +99,11 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'common.icon-text': CommonIconText;
-      'common.seo': CommonSeo;
+      'common.link': CommonLink;
       'common.slider': CommonSlider;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
+      'slider.slide': SliderSlide;
     }
   }
 }

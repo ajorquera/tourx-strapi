@@ -4,14 +4,6 @@
     "displayName": "IconText"
   },
   "options": {},
-  "attributes": {
-    "text": {
-      "type": "string",
-      "required": true
-    },
-    "icon": {
-      "type": "string"
-    }
-  },
+  "attributes": {},
   "config": {}
 }

@@ -6,18 +6,18 @@
   },
   "options": {},
   "attributes": {
-    "metaTitle": {
-      "required": true,
+    "titulo": {
       "type": "string",
-      "maxLength": 60
+      "maxLength": 60,
+      "required": true
     },
-    "metaDescription": {
+    "descripcion": {
       "type": "string",
-      "required": true,
+      "minLength": 50,
       "maxLength": 160,
-      "minLength": 50
+      "required": true
     },
-    "metaImage": {
+    "imagen": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -27,8 +27,8 @@
     },
     "openGraph": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.open-graph"
+      "component": "shared.open-graph",
+      "repeatable": false
     },
     "keywords": {
       "type": "text",

@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_slider_slides",
+  "info": {
+    "displayName": "Slide",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "cta": {
+      "type": "component",
+      "component": "common.link",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}
