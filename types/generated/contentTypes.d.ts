@@ -389,7 +389,13 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    contenido: Schema.Attribute.Blocks &
+    blocks: Schema.Attribute.DynamicZone<['slider.card-slider']> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    content: Schema.Attribute.Blocks &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -398,7 +404,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Hero: Schema.Attribute.Component<'common.slider', false> &
+    hero: Schema.Attribute.Component<'common.slider', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

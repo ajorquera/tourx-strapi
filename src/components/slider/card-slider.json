@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_slider_card_sliders",
+  "info": {
+    "displayName": "CardSlider"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "common.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

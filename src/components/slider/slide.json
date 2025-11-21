@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "imagen": {
+    "image": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
@@ -16,10 +16,10 @@
         "audios"
       ]
     },
-    "titulo": {
+    "title": {
       "type": "string"
     },
-    "descripcion": {
+    "description": {
       "type": "string"
     },
     "cta": {

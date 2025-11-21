@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface CommonCard extends Struct.ComponentSchema {
+  collectionName: 'components_common_cards';
+  info: {
+    displayName: 'Card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CommonIconText extends Struct.ComponentSchema {
   collectionName: 'components_common_icon_texts';
   info: {
@@ -14,7 +26,7 @@ export interface CommonLink extends Struct.ComponentSchema {
     displayName: 'Link';
   };
   attributes: {
-    contenido: Schema.Attribute.String;
+    content: Schema.Attribute.String;
     link: Schema.Attribute.String;
   };
 }
@@ -61,23 +73,35 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
   attributes: {
     canonicalURL: Schema.Attribute.String;
-    descripcion: Schema.Attribute.String &
+    description: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 160;
         minLength: 50;
       }>;
-    imagen: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images'>;
     keywords: Schema.Attribute.Text;
     metaRobots: Schema.Attribute.String;
     metaViewport: Schema.Attribute.String;
     openGraph: Schema.Attribute.Component<'shared.open-graph', false>;
     structuredData: Schema.Attribute.JSON;
-    titulo: Schema.Attribute.String &
+    title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 60;
       }>;
+  };
+}
+
+export interface SliderCardSlider extends Struct.ComponentSchema {
+  collectionName: 'components_slider_card_sliders';
+  info: {
+    displayName: 'CardSlider';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'common.card', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -89,20 +113,22 @@ export interface SliderSlide extends Struct.ComponentSchema {
   };
   attributes: {
     cta: Schema.Attribute.Component<'common.link', false>;
-    descripcion: Schema.Attribute.String;
-    imagen: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    titulo: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'common.card': CommonCard;
       'common.icon-text': CommonIconText;
       'common.link': CommonLink;
       'common.slider': CommonSlider;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
+      'slider.card-slider': SliderCardSlider;
       'slider.slide': SliderSlide;
     }
   }

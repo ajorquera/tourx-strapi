@@ -25,7 +25,7 @@
       "component": "shared.seo",
       "repeatable": false
     },
-    "Hero": {
+    "hero": {
       "type": "component",
       "pluginOptions": {
         "i18n": {
@@ -35,13 +35,24 @@
       "component": "common.slider",
       "repeatable": false
     },
-    "contenido": {
+    "content": {
       "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "slider.card-slider"
+      ]
     }
   }
 }
