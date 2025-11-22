@@ -11,7 +11,8 @@ export default ({env}) => [
             "'self'",
             "data:",
             "blob:",
-            env("HOST"),
+            env("SUPABASE_API_URL"),
+            "*.media.strapiapp.com" 
           ],
         },
       },
