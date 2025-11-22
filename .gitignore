@@ -96,6 +96,8 @@ logs
 results
 node_modules
 .node_history
+.yarn/
+.yarnrc
 
 ############################
 # Package managers
