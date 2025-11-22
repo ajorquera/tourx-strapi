@@ -11,7 +11,7 @@ export default ({env}) => [
             "'self'",
             "data:",
             "blob:",
-            env("SUPABASE_API_URL"),
+            env("HOST"),
           ],
         },
       },
