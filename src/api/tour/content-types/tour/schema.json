@@ -23,16 +23,6 @@
         }
       },
       "required": true
-    },
-    "Hero": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "common.slider",
-      "repeatable": true
     }
   }
 }

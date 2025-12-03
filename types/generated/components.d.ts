@@ -31,17 +31,6 @@ export interface CommonLink extends Struct.ComponentSchema {
   };
 }
 
-export interface CommonSlider extends Struct.ComponentSchema {
-  collectionName: 'components_common_sliders';
-  info: {
-    displayName: 'Slider';
-    icon: 'grid';
-  };
-  attributes: {
-    slides: Schema.Attribute.Component<'slider.slide', true>;
-  };
-}
-
 export interface SharedOpenGraph extends Struct.ComponentSchema {
   collectionName: 'components_shared_open_graphs';
   info: {
@@ -93,6 +82,21 @@ export interface SharedSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedVideo extends Struct.ComponentSchema {
+  collectionName: 'components_shared_videos';
+  info: {
+    displayName: 'Video';
+  };
+  attributes: {
+    autoplay: Schema.Attribute.Boolean;
+    ends: Schema.Attribute.String;
+    loop: Schema.Attribute.Boolean;
+    poster: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    src: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    starts: Schema.Attribute.String;
+  };
+}
+
 export interface SliderCardSlider extends Struct.ComponentSchema {
   collectionName: 'components_slider_card_sliders';
   info: {
@@ -119,17 +123,29 @@ export interface SliderSlide extends Struct.ComponentSchema {
   };
 }
 
+export interface SliderSlider extends Struct.ComponentSchema {
+  collectionName: 'components_slider_sliders';
+  info: {
+    displayName: 'Slider';
+    icon: 'grid';
+  };
+  attributes: {
+    slide: Schema.Attribute.Component<'slider.slide', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'common.card': CommonCard;
       'common.icon-text': CommonIconText;
       'common.link': CommonLink;
-      'common.slider': CommonSlider;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
+      'shared.video': SharedVideo;
       'slider.card-slider': SliderCardSlider;
       'slider.slide': SliderSlide;
+      'slider.slider': SliderSlider;
     }
   }
 }

@@ -1,12 +1,12 @@
 {
-  "collectionName": "components_common_sliders",
+  "collectionName": "components_slider_sliders",
   "info": {
     "displayName": "Slider",
     "icon": "grid"
   },
   "options": {},
   "attributes": {
-    "slides": {
+    "slide": {
       "type": "component",
       "component": "slider.slide",
       "repeatable": true

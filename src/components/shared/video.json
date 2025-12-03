@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_shared_videos",
+  "info": {
+    "displayName": "Video"
+  },
+  "options": {},
+  "attributes": {
+    "src": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "poster": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "autoplay": {
+      "type": "boolean"
+    },
+    "starts": {
+      "type": "string"
+    },
+    "ends": {
+      "type": "string"
+    },
+    "loop": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

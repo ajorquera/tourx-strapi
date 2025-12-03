@@ -12,7 +12,14 @@ export default ({env}) => [
             "data:",
             "blob:",
             env("SUPABASE_API_URL"),
-            "*.media.strapiapp.com" 
+            "*.media.strapiapp.com" ,
+          ],
+          "media-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            env("SUPABASE_API_URL"),
+            "*.media.strapiapp.com" ,
           ],
         },
       },
