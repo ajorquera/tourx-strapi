@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plain_pages",
+  "info": {
+    "singularName": "plain-page",
+    "pluralName": "plain-pages",
+    "displayName": "Plain Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "content": {
+      "type": "richtext",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

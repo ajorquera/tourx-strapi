@@ -39,16 +39,15 @@
       "min": 1,
       "max": 1
     },
-    "blocks": {
-      "type": "dynamiczone",
+    "TopTours": {
+      "type": "component",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "components": [
-        "slider.card-slider"
-      ]
+      "component": "slider.card-slider",
+      "repeatable": false
     }
   }
 }

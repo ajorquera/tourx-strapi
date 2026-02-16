@@ -21,11 +21,6 @@
     },
     "description": {
       "type": "string"
-    },
-    "cta": {
-      "type": "component",
-      "component": "common.link",
-      "repeatable": false
     }
   },
   "config": {}

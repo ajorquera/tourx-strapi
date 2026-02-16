@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_languages",
+  "info": {
+    "displayName": "Languages",
+    "icon": "earth"
+  },
+  "options": {},
+  "attributes": {
+    "Language": {
+      "type": "enumeration",
+      "enum": [
+        "ES",
+        "IT",
+        "EN"
+      ]
+    }
+  },
+  "config": {}
+}

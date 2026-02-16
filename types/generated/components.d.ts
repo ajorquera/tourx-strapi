@@ -1,33 +1,42 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
-export interface CommonCard extends Struct.ComponentSchema {
-  collectionName: 'components_common_cards';
+export interface SharedDuration extends Struct.ComponentSchema {
+  collectionName: 'components_shared_durations';
   info: {
-    displayName: 'Card';
-  };
-  attributes: {
-    description: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface CommonIconText extends Struct.ComponentSchema {
-  collectionName: 'components_common_icon_texts';
-  info: {
-    displayName: 'IconText';
+    displayName: 'Duration';
   };
   attributes: {};
 }
 
-export interface CommonLink extends Struct.ComponentSchema {
-  collectionName: 'components_common_links';
+export interface SharedLanguages extends Struct.ComponentSchema {
+  collectionName: 'components_shared_languages';
+  info: {
+    displayName: 'Languages';
+    icon: 'earth';
+  };
+  attributes: {
+    Language: Schema.Attribute.Enumeration<['ES', 'IT', 'EN']>;
+  };
+}
+
+export interface SharedLink extends Struct.ComponentSchema {
+  collectionName: 'components_shared_links';
   info: {
     displayName: 'Link';
   };
   attributes: {
     content: Schema.Attribute.String;
     link: Schema.Attribute.String;
+  };
+}
+
+export interface SharedNav extends Struct.ComponentSchema {
+  collectionName: 'components_shared_navs';
+  info: {
+    displayName: 'Nav';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'shared.link', true>;
   };
 }
 
@@ -103,9 +112,9 @@ export interface SliderCardSlider extends Struct.ComponentSchema {
     displayName: 'CardSlider';
   };
   attributes: {
-    cards: Schema.Attribute.Component<'common.card', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    tour: Schema.Attribute.Component<'slider.slide', true>;
   };
 }
 
@@ -116,7 +125,6 @@ export interface SliderSlide extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    cta: Schema.Attribute.Component<'common.link', false>;
     description: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
@@ -137,9 +145,10 @@ export interface SliderSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
-      'common.card': CommonCard;
-      'common.icon-text': CommonIconText;
-      'common.link': CommonLink;
+      'shared.duration': SharedDuration;
+      'shared.languages': SharedLanguages;
+      'shared.link': SharedLink;
+      'shared.nav': SharedNav;
       'shared.open-graph': SharedOpenGraph;
       'shared.seo': SharedSeo;
       'shared.video': SharedVideo;

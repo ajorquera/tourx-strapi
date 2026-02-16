@@ -11,9 +11,9 @@
     "subtitle": {
       "type": "string"
     },
-    "cards": {
+    "tour": {
       "type": "component",
-      "component": "common.card",
+      "component": "slider.slide",
       "repeatable": true
     }
   },
