@@ -16,12 +16,6 @@
     },
     "lastName": {
       "type": "string"
-    },
-    "tours": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tour.tour",
-      "mappedBy": "guide"
     }
   }
 }

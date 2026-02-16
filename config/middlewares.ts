@@ -7,6 +7,11 @@ export default ({env}) => [
       contentSecurityPolicy: {
         directives: {
           "default-src": ["'self'"],
+          "script-src": [
+            "'self'",
+            "'unsafe-inline'",
+            "https://maps.googleapis.com",
+          ],
           "img-src": [
             "'self'",
             "data:",

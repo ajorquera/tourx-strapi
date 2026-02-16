@@ -114,7 +114,7 @@ export interface SliderCardSlider extends Struct.ComponentSchema {
   attributes: {
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
-    tour: Schema.Attribute.Component<'slider.slide', true>;
+    tours: Schema.Attribute.Relation<'oneToMany', 'api::tour.tour'>;
   };
 }
 

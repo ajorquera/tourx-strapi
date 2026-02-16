@@ -11,10 +11,10 @@
     "subtitle": {
       "type": "string"
     },
-    "tour": {
-      "type": "component",
-      "component": "slider.slide",
-      "repeatable": true
+    "tours": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tour.tour"
     }
   },
   "config": {}

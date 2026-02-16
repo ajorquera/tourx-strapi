@@ -81,9 +81,8 @@
     },
     "guide": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::guide.guide",
-      "inversedBy": "tours"
+      "relation": "oneToOne",
+      "target": "api::guide.guide"
     },
     "content": {
       "type": "blocks",
@@ -106,6 +105,25 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::review.review"
+    },
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": true
+    },
+    "place": {
+      "type": "customField",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "customField": "plugin::google-maps.location-picker"
     }
   }
 }
