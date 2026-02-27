@@ -10,5 +10,17 @@
     "draftAndPublish": false
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "date": {
+      "type": "datetime"
+    },
+    "guide": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::guide.guide"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
 }

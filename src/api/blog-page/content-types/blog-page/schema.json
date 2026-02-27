@@ -26,12 +26,25 @@
       "repeatable": false
     },
     "content": {
-      "type": "richtext",
+      "type": "blocks",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "date": {
+      "type": "date",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
