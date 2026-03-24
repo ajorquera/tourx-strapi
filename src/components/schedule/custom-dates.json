@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_schedule_custom_dates",
+  "info": {
+    "displayName": "CustomDates"
+  },
+  "options": {},
+  "attributes": {
+    "dates": {
+      "type": "component",
+      "component": "shared.dates",
+      "repeatable": true
+    },
+    "times": {
+      "type": "component",
+      "component": "shared.times",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_schedule_custom_months",
+  "info": {
+    "displayName": "CustomMonths"
+  },
+  "options": {},
+  "attributes": {
+    "days": {
+      "type": "component",
+      "component": "schedule.days",
+      "repeatable": false
+    },
+    "months": {
+      "type": "component",
+      "component": "schedule.months",
+      "repeatable": false
+    },
+    "times": {
+      "type": "component",
+      "component": "shared.times",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

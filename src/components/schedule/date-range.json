@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_schedule_date_ranges",
+  "info": {
+    "displayName": "DateRange"
+  },
+  "options": {},
+  "attributes": {
+    "days": {
+      "type": "component",
+      "component": "schedule.days",
+      "repeatable": false
+    },
+    "start": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    },
+    "dates": {
+      "type": "component",
+      "component": "shared.dates",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

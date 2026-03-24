@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_schedule_months",
+  "info": {
+    "displayName": "Months"
+  },
+  "options": {},
+  "attributes": {
+    "January": {
+      "type": "boolean"
+    },
+    "February": {
+      "type": "boolean"
+    },
+    "March": {
+      "type": "boolean"
+    },
+    "April": {
+      "type": "boolean"
+    },
+    "May": {
+      "type": "boolean"
+    },
+    "June": {
+      "type": "boolean"
+    },
+    "July": {
+      "type": "boolean"
+    },
+    "August": {
+      "type": "boolean"
+    },
+    "September": {
+      "type": "boolean"
+    },
+    "October": {
+      "type": "boolean"
+    },
+    "November": {
+      "type": "boolean"
+    },
+    "December": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

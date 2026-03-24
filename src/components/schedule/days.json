@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_schedule_days",
+  "info": {
+    "displayName": "Days"
+  },
+  "options": {},
+  "attributes": {
+    "Monday": {
+      "type": "boolean"
+    },
+    "Tuesday": {
+      "type": "boolean"
+    },
+    "Wednesday": {
+      "type": "boolean"
+    },
+    "Thursday": {
+      "type": "boolean"
+    },
+    "Friday": {
+      "type": "boolean"
+    },
+    "Saturday": {
+      "type": "boolean"
+    },
+    "Sunday": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

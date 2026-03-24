@@ -1,0 +1,82 @@
+{
+  "collectionName": "components_schedule_schedules",
+  "info": {
+    "displayName": "Schedule"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Date Range",
+        "Custom Dates",
+        "Yearly",
+        "Custom Months"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "customDates": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "Custom Dates"
+          ]
+        }
+      },
+      "component": "schedule.custom-dates",
+      "repeatable": false
+    },
+    "dateRange": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "Date Range"
+          ]
+        }
+      },
+      "component": "schedule.date-range",
+      "repeatable": false
+    },
+    "customMonths": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "Custom Months"
+          ]
+        }
+      },
+      "component": "schedule.custom-months",
+      "repeatable": false
+    },
+    "yearly": {
+      "type": "component",
+      "conditions": {
+        "visible": {
+          "==": [
+            {
+              "var": "type"
+            },
+            "Yearly"
+          ]
+        }
+      },
+      "component": "schedule.yearly",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

@@ -124,6 +124,16 @@
         }
       },
       "customField": "plugin::google-maps.location-picker"
+    },
+    "Schedules": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "schedule.schedule",
+      "repeatable": true
     }
   }
 }
